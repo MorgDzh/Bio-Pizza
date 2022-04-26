@@ -6,7 +6,7 @@ export const adminContext = React.createContext();
 
 const initState = {
   products: [],
-//   productToEdit: null,
+  productToEdit: null,
 };
 
 const reducer = (state = initState, action) => {
@@ -27,27 +27,27 @@ const AdminContext = (props) => {
     await axios.post(API, newProduct);
   };  
 
-//   const getProducts = async () => {
-//     const response = await axios(API);
-//     const action = {
-//       type: "GET_PRODUCTS",
-//       payload: response.data,
-//     };
-//     dispatch(action);
-//   };
+  const getProducts = async () => {
+    const response = await axios(API);
+    const action = {
+      type: "GET_PRODUCTS",
+      payload: response.data,
+    };
+    dispatch(action);
+  };
 
-//   const getProductToEdit = async (id) => {
-//     const response = await axios(`${API}/${id}`);
-//     const action = {
-//       type: "GET_PRODUCT_TO_EDIT",
-//       payload: response.data,
-//     };
-//     dispatch(action);
-//   };
+  const getProductToEdit = async (id) => {
+    const response = await axios(`${API}/${id}`);
+    const action = {
+      type: "GET_PRODUCT_TO_EDIT",
+      payload: response.data,
+    };
+    dispatch(action);
+  };
 
-//   const saveEditedProduct = async(editedProduct) => {
-//     await axios.patch(`${API}/${editedProduct.id}`, editedProduct)
-//   }
+  const saveEditedProduct = async(editedProduct) => {
+    await axios.patch(`${API}/${editedProduct.id}`, editedProduct)
+  }
 
 //   const deleteProduct = async (id) => {
 //     await axios.delete(`${API}/${id}`)
@@ -58,12 +58,12 @@ const AdminContext = (props) => {
     <adminContext.Provider
       value={{
         addProduct: addProduct,
-        // getProducts: getProducts,
-        // getProductToEdit: getProductToEdit,
-        // saveEditedProduct: saveEditedProduct,
+        getProducts: getProducts,
+        getProductToEdit: getProductToEdit,
+        saveEditedProduct: saveEditedProduct,
         // deleteProduct: deleteProduct,
         products: state.products,
-        // productToEdit: state.productToEdit,
+        productToEdit: state.productToEdit,
       }}
     >
       {props.children}

@@ -1,31 +1,49 @@
 {
   "products": [
     {
-      "name": "dfs",
-      "description": "dfs",
-      "price": 1231,
-      "image": "fdsfqsfqs",
-      "size": "xl",
-      "color": "white",
+      "name": "aktan",
+      "description": "aktan",
+      "price": 2312312,
+      "image": "krushka",
+      "additives": "cheese",
+      "size": "m",
       "id": 1
     },
     {
-      "name": "sdfds",
-      "description": "gsgas",
-      "price": 1231,
-      "image": "dsag",
-      "size": "xl",
-      "color": "white",
+      "name": "kirill",
+      "description": "nuray",
+      "price": 1,
+      "image": "dsbuighuidgf",
+      "additives": "chiken",
+      "size": "s",
       "id": 2
     },
     {
-      "name": "fsfsd",
-      "description": "sdfsf",
-      "price": 213412,
-      "image": "fsdgas",
+      "name": "xox",
+      "description": "hende",
+      "price": 1500,
+      "image": "krak",
+      "dough": "thick",
       "size": "m",
-      "color": "yellow",
       "id": 3
+    },
+    {
+      "name": "dastan",
+      "description": "rangers",
+      "price": 412541,
+      "image": "qihfwdghosdi",
+      "dough": "fat",
+      "size": "m",
+      "id": 4
+    },
+    {
+      "name": "фывп",
+      "description": "фывпфы",
+      "price": 23412,
+      "image": "авпфвпфы",
+      "dough": "thick",
+      "size": "m",
+      "id": 5
     }
   ]
 }

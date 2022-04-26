@@ -19,8 +19,8 @@ import {
       description: "",
       price: "",
       image: "",
+      dough: "",
       size: "",
-      color: "",
     });
   
     const handleSubmit = (event) => {
@@ -42,7 +42,7 @@ import {
         price: "",
         image: "",
         size: "",
-        color: "",
+        dough: "",
         feedbacks: [],
         likes: 0,
       });
@@ -87,21 +87,18 @@ import {
               variant="standard"
             />
             <FormControl variant="standard">
-              <InputLabel id="color-select-label">Выберите цвет</InputLabel>
+              <InputLabel id="dough-select-label">Выберите тесто</InputLabel>
               <Select
-                value={newProduct.color}
+                value={newProduct.dough}
                 onChange={(e) =>
-                  setNewProduct({ ...newProduct, color: e.target.value })
+                  setNewProduct({ ...newProduct, dough: e.target.value })
                 }
-                label="Выберите цвет"
-                labelId="color-select-label"
+                label="Выберите добавки"
+                labelId="dough-select-label"
               >
-                <MenuItem value="black">Чёрный</MenuItem>
-                <MenuItem value="white">Белый</MenuItem>
-                <MenuItem value="blue">Синий</MenuItem>
-                <MenuItem value="pink">Розовый</MenuItem>
-                <MenuItem value="yellow">Жёлтый</MenuItem>
-                <MenuItem value="red">Красный</MenuItem>
+                <MenuItem value="traditional">Традиционное</MenuItem>
+                <MenuItem value="thick">Тонкое</MenuItem>
+                <MenuItem value="fat">Толстое</MenuItem>
               </Select>
             </FormControl>
             <FormControl variant="standard">
@@ -117,8 +114,6 @@ import {
                 <MenuItem value="s">SMALL</MenuItem>
                 <MenuItem value="m">MIDDLE</MenuItem>
                 <MenuItem value="l">LARGE</MenuItem>
-                <MenuItem value="xl">EXTRA LARGE</MenuItem>
-                <MenuItem value="xxl">XX LARGE</MenuItem>
               </Select>
             </FormControl>
             <Button type="submit" variant="outlined">
