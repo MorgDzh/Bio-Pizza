@@ -13,14 +13,15 @@ import MenuItem from "@mui/material/MenuItem";
 import pizzaLogo from "../assets/pizzaLogo.svg.png";
 import { Link } from "react-router-dom";
 import { Badge, createTheme, ThemeProvider } from "@mui/material";
-// import { Logout, ShoppingCart } from "@mui/icons-material";
-// import { clientContext } from "../contexts/ClientContext";
+import { Logout, ShoppingCart } from "@mui/icons-material";
+import { clientContext } from "../contexts/ClientContext";
 
 // const settings = ["Profile", "Account", "Dashboard", "Logout"];
 
 const Navbar = () => {
-  //   const data = React.useContext(clientContext);
+    const data = React.useContext(clientContext);
   //   const { cartCount, authWithGoogle, user, logOut } = data;
+  const { cartCount } = data;
 
   //   const [anchorElNav, setAnchorElNav] = React.useState(null);
   //   const [anchorElUser, setAnchorElUser] = React.useState(null);
@@ -136,10 +137,9 @@ const Navbar = () => {
                 sx={{ flexGrow: 0 }}
               >
                 <Link to="/cart" style={{ marginRight: 10 }}>
-                  {/* <Badge badgeContent={cartCount} color="error"> */}
-                  {/* <Badge>
+                  <Badge badgeContent={cartCount} color="error">
                     <ShoppingCart />
-                  </Badge> */}
+                  </Badge>
                 </Link>
                 {/* {user ? (
                   <>
