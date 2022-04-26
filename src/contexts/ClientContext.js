@@ -7,12 +7,22 @@ export const clientContext = React.createContext();
 
 const initState = {
   products: [],
+  cartCount: JSON.parse(localStorage.getItem("cart"))
+    ? JSON.parse(localStorage.getItem("cart")).products.length
+    : 0,
+  myCart: null,
 };
 
 const reducer = (state = initState, action) => {
   switch (action.type) {
     case "GET_PRODUCTS":
       return { ...state, products: action.payload };
+    case "ADD_PRODUCT_TO_CART":
+      return { ...state, cartCount: action.payload };
+    case "DELETE_PRODUCT_IN_CART":
+      return { ...state, cartCount: action.payload };
+    case "GET_PRODUCTS_FROM_CART":
+      return { ...state, myCart: action.payload };
     default:
       return state;
   }
@@ -33,10 +43,10 @@ const ClientContext = (props) => {
   const [currentPage, setCurrentPage] = useState(1);
 
   const indexOfLastProduct = currentPage * productsPerPage;
-//   // For normal pagination
+  //   // For normal pagination
   const indexOfFirstProduct = indexOfLastProduct - productsPerPage;
-//   // For scroll pagination
-//   // const indexOfFirstProduct = 0;
+  //   // For scroll pagination
+  //   // const indexOfFirstProduct = 0;
   const products = state.products.slice(
     indexOfFirstProduct,
     indexOfLastProduct
@@ -44,10 +54,10 @@ const ClientContext = (props) => {
   const totalCount = state.products.length;
 
   const handlePagination = (page) => {
-//     // For normal pagination
-    setCurrentPage(page)
-//     // For scroll pagination
-//     // setCurrentPage(currentPage + 1);
+    //     // For normal pagination
+    setCurrentPage(page);
+    //     // For scroll pagination
+    //     // setCurrentPage(currentPage + 1);
   };
 
   const addProductToCart = (product) => {
@@ -153,7 +163,11 @@ const ClientContext = (props) => {
         getProductsFromCart: getProductsFromCart,
         changeCountProductInCart: changeCountProductInCart,
         likeCounter: likeCounter,
+        productsPerPage: productsPerPage,
+        totalCount: totalCount,
         products: products,
+        cartCount: state.cartCount,
+        myCart: state.myCart,
       }}
     >
       {props.children}

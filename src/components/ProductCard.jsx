@@ -11,7 +11,7 @@ import Typography from "@mui/material/Typography";
 import FavoriteIcon from "@mui/icons-material/Favorite";
 import ShareIcon from "@mui/icons-material/Share";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
-// import { ShoppingCart } from "@mui/icons-material";
+import { ShoppingCart } from "@mui/icons-material";
 import { clientContext } from "../contexts/ClientContext";
 import { Link } from "react-router-dom";
 
@@ -31,9 +31,9 @@ export default function ProductCard({ item }) {
   const [liked, setLiked] = React.useState(false);
   const data = React.useContext(clientContext);
   const {
-    // addProductToCart,
-    // checkProductInCart,
-    // deleteProductInCart,    
+    addProductToCart,
+    checkProductInCart,
+    deleteProductInCart,    
     likeCounter,
   } = data;
 
@@ -77,7 +77,7 @@ export default function ProductCard({ item }) {
         <IconButton aria-label="share">
           <ShareIcon />
         </IconButton>
-        {/* {checkProductInCart(item.id) ? (
+        {checkProductInCart(item.id) ? (
           <IconButton onClick={() => deleteProductInCart(item.id)}>
             <ShoppingCart color="error" />
           </IconButton>
@@ -85,7 +85,7 @@ export default function ProductCard({ item }) {
           <IconButton onClick={() => addProductToCart(item)}>
             <ShoppingCart color="inherit" />
           </IconButton>
-        )} */}
+        )}
         <ExpandMore
           expand={expanded}
           onClick={handleExpandClick}
