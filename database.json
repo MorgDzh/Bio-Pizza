@@ -1,24 +1,6 @@
 {
   "products": [
     {
-      "name": "aktan",
-      "description": "aktan",
-      "price": 2312312,
-      "image": "krushka",
-      "additives": "cheese",
-      "size": "m",
-      "id": 1
-    },
-    {
-      "name": "kirill",
-      "description": "nuray",
-      "price": 1,
-      "image": "dsbuighuidgf",
-      "additives": "chiken",
-      "size": "s",
-      "id": 2
-    },
-    {
       "name": "xox",
       "description": "hende",
       "price": 1500,
@@ -35,15 +17,6 @@
       "dough": "fat",
       "size": "m",
       "id": 4
-    },
-    {
-      "name": "фывп",
-      "description": "фывпфы",
-      "price": 23412,
-      "image": "авпфвпфы",
-      "dough": "thick",
-      "size": "m",
-      "id": 5
     }
   ]
 }

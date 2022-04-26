@@ -49,10 +49,10 @@ const AdminContext = (props) => {
     await axios.patch(`${API}/${editedProduct.id}`, editedProduct)
   }
 
-//   const deleteProduct = async (id) => {
-//     await axios.delete(`${API}/${id}`)
-//     getProducts()
-//   }
+  const deleteProduct = async (id) => {
+    await axios.delete(`${API}/${id}`)
+    getProducts()
+  }
 
   return (
     <adminContext.Provider
@@ -61,7 +61,7 @@ const AdminContext = (props) => {
         getProducts: getProducts,
         getProductToEdit: getProductToEdit,
         saveEditedProduct: saveEditedProduct,
-        // deleteProduct: deleteProduct,
+        deleteProduct: deleteProduct,
         products: state.products,
         productToEdit: state.productToEdit,
       }}
