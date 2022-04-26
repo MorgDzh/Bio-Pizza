@@ -1,0 +1,31 @@
+{
+  "products": [
+    {
+      "name": "dfs",
+      "description": "dfs",
+      "price": 1231,
+      "image": "fdsfqsfqs",
+      "size": "xl",
+      "color": "white",
+      "id": 1
+    },
+    {
+      "name": "sdfds",
+      "description": "gsgas",
+      "price": 1231,
+      "image": "dsag",
+      "size": "xl",
+      "color": "white",
+      "id": 2
+    },
+    {
+      "name": "fsfsd",
+      "description": "sdfsf",
+      "price": 213412,
+      "image": "fsdgas",
+      "size": "m",
+      "color": "yellow",
+      "id": 3
+    }
+  ]
+}

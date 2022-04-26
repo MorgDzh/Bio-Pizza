@@ -5,14 +5,25 @@ import Toolbar from "@mui/material/Toolbar";
 import IconButton from "@mui/material/IconButton";
 import Typography from "@mui/material/Typography";
 import Menu from "@mui/material/Menu";
+// import MenuIcon from "@mui/icons-material/Menu";
 import Container from "@mui/material/Container";
+// import Avatar from "@mui/material/Avatar";
 import Button from "@mui/material/Button";
-// import MenuItem from "@mui/material/MenuItem";
-import pizzaLogo from "../assets/pizzaLogo.svg.png"
+import MenuItem from "@mui/material/MenuItem";
+import pizzaLogo from "../assets/pizzaLogo.svg.png";
 import { Link } from "react-router-dom";
-import { createTheme, ThemeProvider } from "@mui/material";
+import { Badge, createTheme, ThemeProvider } from "@mui/material";
+// import { Logout, ShoppingCart } from "@mui/icons-material";
+// import { clientContext } from "../contexts/ClientContext";
+
+// const settings = ["Profile", "Account", "Dashboard", "Logout"];
 
 const Navbar = () => {
+  //   const data = React.useContext(clientContext);
+  //   const { cartCount, authWithGoogle, user, logOut } = data;
+
+  //   const [anchorElNav, setAnchorElNav] = React.useState(null);
+  //   const [anchorElUser, setAnchorElUser] = React.useState(null);
 
   const darkTheme = createTheme({
     palette: {
@@ -22,6 +33,21 @@ const Navbar = () => {
       },
     },
   });
+
+  //   const handleOpenNavMenu = (event) => {
+  //     setAnchorElNav(event.currentTarget);
+  //   };
+  //   const handleOpenUserMenu = (event) => {
+  //     setAnchorElUser(event.currentTarget);
+  //   };
+
+    // const handleCloseNavMenu = () => {
+    //   setAnchorElNav(null);
+    // };
+
+  //   const handleCloseUserMenu = () => {
+  //     setAnchorElUser(null);
+  //   };
 
   return (
     <React.Fragment>
@@ -39,21 +65,20 @@ const Navbar = () => {
                   <img width={50} src={pizzaLogo} alt="" />
                 </Link>
               </Typography>
-
               <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
                 <IconButton
                   size="large"
                   aria-label="account of current user"
                   aria-controls="menu-appbar"
                   aria-haspopup="true"
-                //   onClick={handleOpenNavMenu}
+                  //   onClick={handleOpenNavMenu}
                   color="inherit"
                 >
                   {/* <MenuIcon /> */}
                 </IconButton>
                 <Menu
                   id="menu-appbar"
-                //   anchorEl={anchorElNav}
+                  //   anchorEl={anchorElNav}
                   anchorOrigin={{
                     vertical: "bottom",
                     horizontal: "left",
@@ -63,8 +88,8 @@ const Navbar = () => {
                     vertical: "top",
                     horizontal: "left",
                   }}
-                //   open={Boolean(anchorElNav)}
-                //   onClose={handleCloseNavMenu}
+                  //   open={Boolean(anchorElNav)}
+                  //   onClose={handleCloseNavMenu}
                   sx={{
                     display: { xs: "block", md: "none" },
                   }}
@@ -77,9 +102,9 @@ const Navbar = () => {
                   </Link>
                   <Link to="/admin-panel/add">
                     {/* <MenuItem onClick={handleCloseNavMenu}> */}
-                    {/* <MenuItem>
+                    <MenuItem>
                       <Typography textAlign="center">ADD PRODUCT</Typography>
-                    </MenuItem> */}
+                    </MenuItem>
                   </Link>
                 </Menu>
               </Box>
@@ -111,7 +136,32 @@ const Navbar = () => {
                 sx={{ flexGrow: 0 }}
               >
                 <Link to="/cart" style={{ marginRight: 10 }}>
+                  {/* <Badge badgeContent={cartCount} color="error"> */}
+                  {/* <Badge>
+                    <ShoppingCart />
+                  </Badge> */}
                 </Link>
+                {/* {user ? (
+                  <>
+                    <Avatar
+                      src={user.photoURL}
+                      alt={user.displayName}
+                      style={{ marginRight: 10 }}
+                    />
+                    <span style={{ marginRight: 10 }}>{user.email}</span>
+                    <Button onClick={logOut}>
+                      <Logout color="error" />
+                    </Button>
+                  </>
+                ) : (
+                  <Button
+                    onClick={authWithGoogle}
+                    variant="outlined"
+                    color="error"
+                  >
+                    Войти
+                  </Button>
+                )} */}
               </Box>
             </Toolbar>
           </Container>
