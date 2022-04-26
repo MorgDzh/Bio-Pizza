@@ -4,6 +4,7 @@ import Navbar from "./components/Navbar";
 import AddProductPage from "./pages/AddProductPage";
 import AdminPage from "./pages/AdminPage";
 import EditProductPage from "./pages/EditProduct";
+import MainPage from "./pages/MainPage";
 
 const Navigation = () => {
   return (
@@ -13,6 +14,7 @@ const Navigation = () => {
         <Route path="/admin-panel/add" element={<AddProductPage />} />
         <Route path="/admin-panel" element={<AdminPage />} />
         <Route path="/admin-panel/edit/:id" element={<EditProductPage />} />
+        <Route path="/" element={<MainPage />} />
       </Routes>
     </BrowserRouter>
   );

@@ -98,7 +98,7 @@ const EditProductPage = () => {
               onChange={(e) =>
                 setEditedProduct({ ...editedProduct, dough: e.target.value })
               }
-              label="Выберите цвет"
+              label="Выберите тесто"
               labelId="dough-select-label"
             >
               <MenuItem value="traditional">Традиционное</MenuItem>
