@@ -28,7 +28,7 @@
       "dough": "thick",
       "size": "m",
       "id": 3,
-      "likes": 1
+      "likes": 2
     },
     {
       "name": "xox",
@@ -79,15 +79,6 @@
       "size": "m",
       "id": 8,
       "likes": 1
-    },
-    {
-      "name": "xox",
-      "description": "hende",
-      "price": 1500,
-      "image": "https://www.simplyrecipes.com/thmb/1KOEQ0SPZNXwU0pUXUDdAm6Z7xo=/2001x2001/smart/filters:no_upscale()/Simply-Recipes-Homemade-Pizza-Dough-Lead-Shot-1c-c2b1885d27d4481c9cfe6f6286a64342.jpg",
-      "dough": "thick",
-      "size": "m",
-      "id": 4
     }
   ]
 }

@@ -1,6 +1,12 @@
 import axios from "axios";
-
+import {
+  GoogleAuthProvider,
+  onAuthStateChanged,
+  signInWithPopup,
+  signOut,
+} from "firebase/auth";
 import React, { useEffect, useReducer, useState } from "react";
+import { auth } from "../firebase";
 import { API } from "../helpers/api";
 
 export const clientContext = React.createContext();
@@ -11,6 +17,7 @@ const initState = {
     ? JSON.parse(localStorage.getItem("cart")).products.length
     : 0,
   myCart: null,
+  user: null,
 };
 
 const reducer = (state = initState, action) => {
@@ -23,6 +30,8 @@ const reducer = (state = initState, action) => {
       return { ...state, cartCount: action.payload };
     case "GET_PRODUCTS_FROM_CART":
       return { ...state, myCart: action.payload };
+    case "CHECK_USER":
+      return { ...state, user: action.payload };
     default:
       return state;
   }
@@ -152,6 +161,25 @@ const ClientContext = (props) => {
     getProducts();
   };
 
+  const authWithGoogle = async () => {
+    const provider = new GoogleAuthProvider();
+    signInWithPopup(auth, provider);
+  };
+
+  useEffect(() => {
+    onAuthStateChanged(auth, (user) => {
+      const action = {
+        type: "CHECK_USER",
+        payload: user,
+      };
+      dispatch(action);
+    });
+  }, []);
+
+  const logOut = () => {
+    signOut(auth);
+  };
+
   return (
     <clientContext.Provider
       value={{
@@ -163,11 +191,14 @@ const ClientContext = (props) => {
         getProductsFromCart: getProductsFromCart,
         changeCountProductInCart: changeCountProductInCart,
         likeCounter: likeCounter,
+        authWithGoogle: authWithGoogle,
+        logOut: logOut,
         productsPerPage: productsPerPage,
         totalCount: totalCount,
         products: products,
         cartCount: state.cartCount,
         myCart: state.myCart,
+        user: state.user,
       }}
     >
       {props.children}
