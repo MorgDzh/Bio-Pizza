@@ -12,6 +12,7 @@ import FavoriteIcon from "@mui/icons-material/Favorite";
 import ShareIcon from "@mui/icons-material/Share";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import { ShoppingCart } from "@mui/icons-material";
+import BookmarkIcon from '@mui/icons-material/Bookmark';
 import { clientContext } from "../contexts/ClientContext";
 import { Link } from "react-router-dom";
 
@@ -35,6 +36,9 @@ export default function ProductCard({ item }) {
     checkProductInCart,
     deleteProductInCart,    
     likeCounter,
+    addProductToFavorite,
+    checkProductInFavorite,
+    deleteProductInFavorite,
   } = data;
 
   const handleExpandClick = () => {
@@ -77,6 +81,15 @@ export default function ProductCard({ item }) {
         <IconButton aria-label="share">
           <ShareIcon />
         </IconButton>
+        {checkProductInFavorite(item.id) ? (
+          <IconButton onClick={() => deleteProductInFavorite(item.id)} >
+            <BookmarkIcon color="error"/>
+          </IconButton>
+        ) : (
+          <IconButton onClick={() => addProductToFavorite(item)}>
+            <BookmarkIcon color="inherit" />
+          </IconButton>
+        )} 
         {checkProductInCart(item.id) ? (
           <IconButton onClick={() => deleteProductInCart(item.id)}>
             <ShoppingCart color="error" />

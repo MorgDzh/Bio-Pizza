@@ -19,6 +19,10 @@ const initState = {
   myCart: null,
   user: null,
   productDetails: null,
+  favoriteCount: JSON.parse(localStorage.getItem("favorite"))
+    ? JSON.parse(localStorage.getItem("favorite")).products.length
+    : 0,
+  myFavorite: null,
 };
 
 const reducer = (state = initState, action) => {
@@ -35,6 +39,12 @@ const reducer = (state = initState, action) => {
       return { ...state, user: action.payload };
     case "GET_PRODUCT_DETAILS":
       return { ...state, productDetails: action.payload };
+    case "ADD_PRODUCT_TO_FAVORITE":
+      return { ...state, favoriteCount: action.payload };
+    case "DELETE_PRODUCT_IN_FAVORITE":
+      return { ...state, favoriteCount: action.payload };
+    case "GET_PRODUCTS_FROM_FAVORITE":
+      return { ...state, myFavorite: action.payload };
     default:
       return state;
   }
@@ -159,6 +169,95 @@ const ClientContext = (props) => {
     getProductsFromCart();
   };
 
+  const addProductToFavorite = (product) => {
+    let favorite = JSON.parse(localStorage.getItem("favorite"));
+    if (!favorite) {
+      favorite = {
+        products: [],
+        totalPrice: 0,
+      };
+    }
+    const newProduct = {
+      product: product,
+      count: 1,
+      subPrice: 0,
+    };
+    newProduct.subPrice = product.price * newProduct.count;
+    favorite.products.push(newProduct);
+    favorite.totalPrice = favorite.products.reduce((prev, next) => {
+      return prev + next.subPrice;
+    }, 0);
+    localStorage.setItem("favorite", JSON.stringify(favorite));
+
+    const action = {
+      type: "ADD_PRODUCT_TO_FAVORITE",
+      payload: favorite.products.length,
+    };
+    dispatch(action);
+  };
+
+  const checkProductInFavorite = (id) => {
+    let favorite = JSON.parse(localStorage.getItem("favorite"));
+    if (!favorite) {
+      return false;
+    }
+    let prod = favorite.products.find((item) => {
+      return item.product.id === id;
+    });
+    if (prod) {
+      return true;
+    } else {
+      return false;
+    }
+  };
+
+  const deleteProductInFavorite = (id) => {
+    let favorite = JSON.parse(localStorage.getItem("favorite"));
+    let newProducts = favorite.products.filter((item) => {
+      return item.product.id !== id;
+    });
+    favorite.products = newProducts;
+    favorite.totalPrice = favorite.products.reduce((prev, next) => {
+      return prev + next.subPrice;
+    }, 0);
+    localStorage.setItem("favorite", JSON.stringify(favorite));
+    const action = {
+      type: "DELETE_PRODUCT_IN_FAVORITE",
+      payload: favorite.products.length,
+    };
+    dispatch(action);
+  };
+
+  const getProductsFromFavorite = () => {
+    const favorite = JSON.parse(localStorage.getItem("favorite")) || {
+      products: [],
+    };
+    const action = {
+      type: "GET_PRODUCTS_FROM_FAVORITE",
+      payload: favorite,
+    };
+    dispatch(action);
+  };
+
+  const changeCountProductInFavorite = (id, count) => {
+    if (count < 1) {
+      return;
+    }
+    const favorite = JSON.parse(localStorage.getItem("favorite"));
+    favorite.products = favorite.products.map((item) => {
+      if (item.product.id === id) {
+        item.count = count;
+        item.subPrice = item.count * item.product.price;
+      }
+      return item;
+    });
+    favorite.totalPrice = favorite.products.reduce((prev, next) => {
+      return prev + next.subPrice;
+    }, 0);
+    localStorage.setItem("favorite", JSON.stringify(favorite));
+    getProductsFromFavorite();
+  };
+
   const likeCounter = async (id, count) => {
     await axios.patch(`${API}/${id}`, { likes: count + 1 });
     getProducts();
@@ -217,11 +316,18 @@ const ClientContext = (props) => {
         logOut: logOut,
         addFeedback: addFeedback,
         getProductDetails: getProductDetails,
+        addProductToFavorite: addProductToFavorite,
+        checkProductInFavorite: checkProductInFavorite,
+        deleteProductInFavorite: deleteProductInFavorite,
+        getProductsFromFavorite: getProductsFromFavorite,
+        changeCountProductInFavorite: changeCountProductInFavorite,
         productsPerPage: productsPerPage,
         totalCount: totalCount,
         products: products,
         cartCount: state.cartCount,
+        favoriteCount: state.favoriteCount,
         myCart: state.myCart,
+        myFavorite: state.myFavorite,
         productDetails: state.productDetails,
         user: state.user,
       }}
