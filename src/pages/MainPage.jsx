@@ -2,6 +2,7 @@ import { Container } from "@mui/material";
 import React, { useContext } from "react";
 import { useEffect } from "react";
 import FiltersBlock from "../components/FiltersBlock";
+import MyPagination from "../components/MyPagination";
 import ProductCard from "../components/ProductCard";
 import { clientContext } from "../contexts/ClientContext";
 
@@ -24,6 +25,7 @@ const MainPage = () => {
             <ProductCard key={item.id} item={item} />
           ))}
         </div>
+        <MyPagination />
       </Container>
     </div>
   );
