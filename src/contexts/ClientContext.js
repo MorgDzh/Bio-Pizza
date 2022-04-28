@@ -18,6 +18,7 @@ const initState = {
     : 0,
   myCart: null,
   user: null,
+  productDetails: null,
 };
 
 const reducer = (state = initState, action) => {
@@ -32,6 +33,8 @@ const reducer = (state = initState, action) => {
       return { ...state, myCart: action.payload };
     case "CHECK_USER":
       return { ...state, user: action.payload };
+    case "GET_PRODUCT_DETAILS":
+      return { ...state, productDetails: action.payload };
     default:
       return state;
   }
@@ -180,6 +183,25 @@ const ClientContext = (props) => {
     signOut(auth);
   };
 
+  const getProductDetails = async (id) => {
+    const response = await axios(`${API}/${id}`);
+    const action = {
+      type: "GET_PRODUCT_DETAILS",
+      payload: response.data,
+    };
+    dispatch(action);
+  };
+
+  const addFeedback = async (newFeedback, product) => {
+    if (product.feedBacks) {
+      product.feedBacks.push(newFeedback);
+      await axios.patch(`${API}/${product.id}`, product);
+    } else {
+      product.feedBacks = [newFeedback];
+      await axios.patch(`${API}/${product.id}`, product);
+    }
+  };
+
   return (
     <clientContext.Provider
       value={{
@@ -193,11 +215,14 @@ const ClientContext = (props) => {
         likeCounter: likeCounter,
         authWithGoogle: authWithGoogle,
         logOut: logOut,
+        addFeedback: addFeedback,
+        getProductDetails: getProductDetails,
         productsPerPage: productsPerPage,
         totalCount: totalCount,
         products: products,
         cartCount: state.cartCount,
         myCart: state.myCart,
+        productDetails: state.productDetails,
         user: state.user,
       }}
     >
