@@ -1,60 +1,60 @@
 {
   "products": [
     {
-      "name": "xox",
-      "description": "hende",
-      "price": 1500,
-      "image": "https://www.simplyrecipes.com/thmb/1KOEQ0SPZNXwU0pUXUDdAm6Z7xo=/2001x2001/smart/filters:no_upscale()/Simply-Recipes-Homemade-Pizza-Dough-Lead-Shot-1c-c2b1885d27d4481c9cfe6f6286a64342.jpg",
-      "dough": "thick",
+      "name": "Барбекю",
+      "description": "Пицца Барбекю,сытная домашняя пицца с соусом барбекю,куриным филе,колбасками,грибами,томатами и маринованными огручиками",
+      "price": 470,
+      "image": "https://mobile.mypizza.kg/jpg/%D0%91%D0%B0%D1%80%D0%B1%D0%B5%D0%BA%D1%8E.jpg",
+      "dough": "30см",
       "size": "m",
       "id": 1,
-      "likes": 1
+      "likes": 3
     },
     {
-      "name": "xox",
-      "description": "hende",
-      "price": 1500,
-      "image": "https://www.simplyrecipes.com/thmb/1KOEQ0SPZNXwU0pUXUDdAm6Z7xo=/2001x2001/smart/filters:no_upscale()/Simply-Recipes-Homemade-Pizza-Dough-Lead-Shot-1c-c2b1885d27d4481c9cfe6f6286a64342.jpg",
-      "dough": "thick",
+      "name": "Карри",
+      "description": "Пицца Карри, Пицца-соус,сыр моцарелла,курица карри в остром фирменом соусе,кинза",
+      "price": 700,
+      "image": "https://mobile.mypizza.kg/jpg/2021/%D0%9E%D1%81%D1%82%D1%80%D1%8B%D0%B5%20%D0%BF%D0%B8%D1%86%D1%86%D1%8B/%D0%9F%D0%B8%D1%86%D1%86%D0%B0-%D0%9A%D0%B0%D1%80%D1%80%D0%B8_%D0%BE%D1%81%D1%82%D1%80%D0%B0%D1%8F.jpg",
+      "dough": "40см",
       "size": "m",
       "id": 2,
       "likes": 2
     },
     {
-      "name": "xox",
-      "description": "hende",
-      "price": 1500,
-      "image": "https://www.simplyrecipes.com/thmb/1KOEQ0SPZNXwU0pUXUDdAm6Z7xo=/2001x2001/smart/filters:no_upscale()/Simply-Recipes-Homemade-Pizza-Dough-Lead-Shot-1c-c2b1885d27d4481c9cfe6f6286a64342.jpg",
+      "name": "деревенская",
+      "description": "Пицца Деревенская.Пицца-соус, сыр моцарелла, маринованная говядина, копчёная утиная грудка, шампиньоны,чеснок, лук, зелень.Village Pizza.",
+      "price": 468,
+      "image": "https://mobile.mypizza.kg/jpg/%D0%B4%D0%B5%D1%80%D0%B5%D0%B2%D0%B5%D0%BD%D1%81%D0%BA%D0%B0%D1%8F.jpg",
       "dough": "thick",
       "size": "m",
       "id": 3,
       "likes": 2
     },
     {
-      "name": "xox",
-      "description": "hende",
-      "price": 1500,
-      "image": "https://www.simplyrecipes.com/thmb/1KOEQ0SPZNXwU0pUXUDdAm6Z7xo=/2001x2001/smart/filters:no_upscale()/Simply-Recipes-Homemade-Pizza-Dough-Lead-Shot-1c-c2b1885d27d4481c9cfe6f6286a64342.jpg",
+      "name": "Пепперони",
+      "description": "Пицца Пепперони.Пицца-соус, сыр моцарелла, салями,шампиньоны.Pepperoni Pizza",
+      "price": 528,
+      "image": "https://mobile.mypizza.kg/jpg/%D0%BF%D0%B5%D0%BF%D0%BF%D0%B5%D1%80%D0%BE%D0%BD%D0%B8.jpg",
       "dough": "thick",
       "size": "m",
       "id": 4,
       "likes": 1
     },
     {
-      "name": "xox",
-      "description": "hende",
-      "price": 1500,
-      "image": "https://www.simplyrecipes.com/thmb/1KOEQ0SPZNXwU0pUXUDdAm6Z7xo=/2001x2001/smart/filters:no_upscale()/Simply-Recipes-Homemade-Pizza-Dough-Lead-Shot-1c-c2b1885d27d4481c9cfe6f6286a64342.jpg",
+      "name": "4 СЫРА",
+      "description": "Пицца 4 сыра.Пицца-соус, сыры: моцарелла, эмменталь, дорблю, пармезан.4 Cheese Pizza.",
+      "price": 648,
+      "image": "https://mobile.mypizza.kg/jpg/4-%D1%81%D1%8B%D1%80%D0%B0.jpg",
       "dough": "thick",
       "size": "m",
       "id": 5,
       "likes": 2
     },
     {
-      "name": "xox",
-      "description": "hende",
-      "price": 1500,
-      "image": "https://www.simplyrecipes.com/thmb/1KOEQ0SPZNXwU0pUXUDdAm6Z7xo=/2001x2001/smart/filters:no_upscale()/Simply-Recipes-Homemade-Pizza-Dough-Lead-Shot-1c-c2b1885d27d4481c9cfe6f6286a64342.jpg",
+      "name": "Доманшняя",
+      "description": "Пицца Домашняя.Пицца-соус, сыр моцарелла, ветчина, помидоры, шампиньоны, зелень.Homemade Pizza.",
+      "price": 498,
+      "image": "https://mobile.mypizza.kg/jpg/%D0%B4%D0%BE%D0%BC%D0%B0%D1%88%D0%BD%D1%8F%D1%8F.jpg",
       "dough": "thick",
       "size": "m",
       "id": 6,
@@ -79,6 +79,15 @@
       "size": "m",
       "id": 8,
       "likes": 1
+    },
+    {
+      "name": "БАРБЕКЮ 40СМ",
+      "description": "Сытная домашняя пицца с соусом барбекю, куриным филе, колбасками, грибами, томатами и маринованными огурчиками. BBQ",
+      "price": 740,
+      "image": "https://mobile.mypizza.kg/jpg/%D0%91%D0%B0%D1%80%D0%B1%D0%B5%D0%BA%D1%8E.jpg",
+      "dough": "traditional",
+      "size": "m",
+      "id": 9
     }
   ]
 }

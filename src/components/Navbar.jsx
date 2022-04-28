@@ -10,7 +10,7 @@ import Container from "@mui/material/Container";
 import Avatar from "@mui/material/Avatar";
 import Button from "@mui/material/Button";
 import MenuItem from "@mui/material/MenuItem";
-import pizzaLogo from "../assets/pizzaLogo.svg.png";
+import pizzaLogo from "../assets/pizzaIldanLogo.png";
 import { Link } from "react-router-dom";
 import { Badge, createTheme, ThemeProvider } from "@mui/material";
 import { Logout, ShoppingCart } from "@mui/icons-material";
@@ -19,11 +19,11 @@ import { clientContext } from "../contexts/ClientContext";
 const settings = ["Profile", "Account", "Dashboard", "Logout"];
 
 const Navbar = () => {
-    const data = React.useContext(clientContext);
-    const { cartCount, authWithGoogle, user, logOut } = data;
+  const data = React.useContext(clientContext);
+  const { cartCount, authWithGoogle, user, logOut } = data;
 
-    const [anchorElNav, setAnchorElNav] = React.useState(null);
-    const [anchorElUser, setAnchorElUser] = React.useState(null);
+  const [anchorElNav, setAnchorElNav] = React.useState(null);
+  const [anchorElUser, setAnchorElUser] = React.useState(null);
 
   const darkTheme = createTheme({
     palette: {
@@ -34,20 +34,20 @@ const Navbar = () => {
     },
   });
 
-    const handleOpenNavMenu = (event) => {
-      setAnchorElNav(event.currentTarget);
-    };
-    const handleOpenUserMenu = (event) => {
-      setAnchorElUser(event.currentTarget);
-    };
+  const handleOpenNavMenu = (event) => {
+    setAnchorElNav(event.currentTarget);
+  };
+  const handleOpenUserMenu = (event) => {
+    setAnchorElUser(event.currentTarget);
+  };
 
-    const handleCloseNavMenu = () => {
-      setAnchorElNav(null);
-    };
+  const handleCloseNavMenu = () => {
+    setAnchorElNav(null);
+  };
 
-    const handleCloseUserMenu = () => {
-      setAnchorElUser(null);
-    };
+  const handleCloseUserMenu = () => {
+    setAnchorElUser(null);
+  };
 
   return (
     <React.Fragment>
@@ -71,14 +71,14 @@ const Navbar = () => {
                   aria-label="account of current user"
                   aria-controls="menu-appbar"
                   aria-haspopup="true"
-                    onClick={handleOpenNavMenu}
+                  onClick={handleOpenNavMenu}
                   color="inherit"
                 >
                   <MenuIcon />
                 </IconButton>
                 <Menu
                   id="menu-appbar"
-                    anchorEl={anchorElNav}
+                  anchorEl={anchorElNav}
                   anchorOrigin={{
                     vertical: "bottom",
                     horizontal: "left",
@@ -88,21 +88,21 @@ const Navbar = () => {
                     vertical: "top",
                     horizontal: "left",
                   }}
-                    open={Boolean(anchorElNav)}
-                    onClose={handleCloseNavMenu}
+                  open={Boolean(anchorElNav)}
+                  onClose={handleCloseNavMenu}
                   sx={{
                     display: { xs: "block", md: "none" },
                   }}
                 >
                   <Link to="/admin-panel">
                     <MenuItem onClick={handleCloseNavMenu}>
-                    {/* <MenuItem> */}
+                      {/* <MenuItem> */}
                       <Typography textAlign="center">Admin PANEL</Typography>
                     </MenuItem>
                   </Link>
                   <Link to="/admin-panel/add">
                     <MenuItem onClick={handleCloseNavMenu}>
-                    {/* <MenuItem> */}
+                      {/* <MenuItem> */}
                       <Typography textAlign="center">ADD PRODUCT</Typography>
                     </MenuItem>
                   </Link>
