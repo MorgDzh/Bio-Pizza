@@ -80,5 +80,23 @@
       "id": 8,
       "likes": 1
     }
+  ],
+  "money": [
+    {
+      "cvc": "412",
+      "expiry": "4142",
+      "focus": "cvc",
+      "name": "dzanaliev aktan",
+      "number": "4214124124124121",
+      "id": 1
+    },
+    {
+      "cvc": "4214",
+      "expiry": "4241",
+      "focus": "cvc",
+      "name": "dzanaliev aktan",
+      "number": "4124124412414214",
+      "id": 2
+    }
   ]
 }

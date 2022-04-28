@@ -8,12 +8,15 @@ import TableHead from "@mui/material/TableHead";
 import TableRow from "@mui/material/TableRow";
 import Paper from "@mui/material/Paper";
 import { clientContext } from "../contexts/ClientContext";
+import Cards from 'react-credit-cards';
+import PaymentForm from "../components/Payment";
+import 'react-credit-cards/es/styles-compiled.css';
 
 const rows = [];
 
 const CartPage = () => {
   const data = React.useContext(clientContext);
-  const { getProductsFromCart, myCart, changeCountProductInCart } = data;
+  const { getProductsFromCart, myCart, changeCountProductInCart, post } = data;
 
   useEffect(() => {
     getProductsFromCart();
@@ -23,7 +26,7 @@ const CartPage = () => {
   }
 
   if (myCart.products.length === 0) {
-    return <h2>Корзина пуста</h2>
+    return <h2>Корзина пуста</h2>;
   }
 
   return (
@@ -59,7 +62,10 @@ const CartPage = () => {
                       type="number"
                       value={item.count}
                       onChange={(e) =>
-                        changeCountProductInCart(item.product.id, e.target.value)
+                        changeCountProductInCart(
+                          item.product.id,
+                          e.target.value
+                        )
                       }
                     />
                   </TableCell>
@@ -79,6 +85,7 @@ const CartPage = () => {
             </TableFooter>
           </Table>
         </TableContainer>
+        <PaymentForm onSubmit />
       </Container>
     </div>
   );
