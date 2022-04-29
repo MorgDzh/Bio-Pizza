@@ -11,10 +11,11 @@ import Typography from "@mui/material/Typography";
 import FavoriteIcon from "@mui/icons-material/Favorite";
 import ShareIcon from "@mui/icons-material/Share";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
-import { ShoppingCart } from "@mui/icons-material";
+import { Reddit, ShoppingCart } from "@mui/icons-material";
 import BookmarkIcon from '@mui/icons-material/Bookmark';
 import { clientContext } from "../contexts/ClientContext";
 import { Link } from "react-router-dom";
+import { blue, red } from "@mui/material/colors";
 
 const ExpandMore = styled((props) => {
   const { expand, ...other } = props;
@@ -46,9 +47,9 @@ export default function ProductCard({ item }) {
   };
 
   return (
-    <Card sx={{ maxWidth: 345 }}>
+    <Card sx={{ maxWidth: 345, background: '#272727', color: "white"}}>
       <Link to={`/details/${item.id}`}>
-        <CardHeader title={item.name} subheader={`${item.price} сом`} />
+        <CardHeader title={item.name} subheader={`${item.price} сом` } />
       </Link>
       <CardMedia
         className="product-card-image"
@@ -75,11 +76,11 @@ export default function ProductCard({ item }) {
           }}
           aria-label="add to favorites"
         >
-          <FavoriteIcon color={liked ? "error" : "inherit"} />
+          <FavoriteIcon color={liked ? "error" : "primary"} />
           <span>{item.likes}</span>
         </IconButton>
         <IconButton aria-label="share">
-          <ShareIcon />
+          <ShareIcon sx={{ color: "white" }}/>
         </IconButton>
         {checkProductInFavorite(item.id) ? (
           <IconButton onClick={() => deleteProductInFavorite(item.id)} >
@@ -87,7 +88,7 @@ export default function ProductCard({ item }) {
           </IconButton>
         ) : (
           <IconButton onClick={() => addProductToFavorite(item)}>
-            <BookmarkIcon color="inherit" />
+            <BookmarkIcon sx={{ color: "white" }}  />
           </IconButton>
         )} 
         {checkProductInCart(item.id) ? (
@@ -96,7 +97,7 @@ export default function ProductCard({ item }) {
           </IconButton>
         ) : (
           <IconButton onClick={() => addProductToCart(item)}>
-            <ShoppingCart color="inherit" />
+            <ShoppingCart sx={{ color: "white" }} />
           </IconButton>
         )}
         <ExpandMore
@@ -104,6 +105,7 @@ export default function ProductCard({ item }) {
           onClick={handleExpandClick}
           aria-expanded={expanded}
           aria-label="show more"
+          sx={{ color: "white" }}
         >
           <ExpandMoreIcon />
         </ExpandMore>

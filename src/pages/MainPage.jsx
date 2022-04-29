@@ -1,6 +1,7 @@
 import { Container } from "@mui/material";
 import React, { useContext } from "react";
 import { useEffect } from "react";
+import DemoCarousel from "../components/Carousel";
 import FiltersBlock from "../components/FiltersBlock";
 import MyPagination from "../components/MyPagination";
 import ProductCard from "../components/ProductCard";
@@ -20,6 +21,7 @@ const MainPage = () => {
         <div>
           <FiltersBlock getProducts={getProducts} />
         </div>
+        <DemoCarousel />
         <div className="products-list">
           {products.map((item) => (
             <ProductCard key={item.id} item={item} />

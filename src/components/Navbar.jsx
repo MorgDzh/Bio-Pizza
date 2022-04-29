@@ -10,7 +10,7 @@ import Container from "@mui/material/Container";
 import Avatar from "@mui/material/Avatar";
 import Button from "@mui/material/Button";
 import MenuItem from "@mui/material/MenuItem";
-import pizzaLogo from "../assets/pizzaLogo.svg.png";
+import pizzaLogo from "../assets/pizzaLogo2.png";
 import { Link } from "react-router-dom";
 import { Badge, createTheme, ThemeProvider } from "@mui/material";
 import { Bookmark, Logout, ShoppingCart } from "@mui/icons-material";

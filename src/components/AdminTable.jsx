@@ -67,7 +67,7 @@ export default function AdminTable(props) {
               <StyledTableCell align="right">{item.size}</StyledTableCell>
               <StyledTableCell align="right">{item.dough}</StyledTableCell>
               <StyledTableCell align="right">
-                <Link to={`/admin-panel/edit/${item.id}`}>EDIT</Link>
+                <Link className="edit-btn" to={`/admin-panel/edit/${item.id}`}>EDIT</Link>
               </StyledTableCell>
               <StyledTableCell align="right">
                 <Button onClick={() => deleteProduct(item.id)}>DEL</Button>

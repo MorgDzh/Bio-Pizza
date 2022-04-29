@@ -40,11 +40,12 @@ import {
         <TextField variant="standard"
           value={searchValue}
           onChange={(e) => handleFilters("q", e.target.value)}
-          type="search"
-          label="Живой поиск..."
+          type="search" 
+          sx={{ color: "white" }}
+          label="Живой поиск... "
         />
         <FormControl variant="standard">
-            <InputLabel id="dough-label">Выберите тесто</InputLabel>
+            <InputLabel id="dough-label" sx={{ color: "white" }}>Выберите тесто</InputLabel>
             <Select
               value={doughValue}
               onChange={(e) => handleFilters("dough", e.target.value )}
@@ -57,7 +58,7 @@ import {
             </Select>
           </FormControl>
         <FormControl variant="standard">
-          <InputLabel id="size-label">Выберите размер</InputLabel>
+          <InputLabel id="size-label" sx={{ color: "white" }}>Выберите размер</InputLabel>
           <Select
             value={sizeValue}
             onChange={(e) => handleFilters("size", e.target.value)}
@@ -69,7 +70,7 @@ import {
             <MenuItem value="l">LARGE</MenuItem>
           </Select>
         </FormControl>
-        <Button variant="outlined" color="error" onClick={resetFilter}>Reset</Button>
+        <Button variant="contained" color="error" onClick={resetFilter} className="reset-btn">Reset</Button>
       </div>
     );
   };
