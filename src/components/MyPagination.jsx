@@ -1,6 +1,7 @@
 import { Button, Pagination } from "@mui/material";
 import React, { useContext } from "react";
 import { clientContext } from "../contexts/ClientContext";
+import theme from "./Theme";
 
 const MyPagination = () => {
   const data = useContext(clientContext);
@@ -9,7 +10,7 @@ const MyPagination = () => {
 
   return (
     <div className="my-pagination">
-      <Pagination onChange={(_, page) => handlePagination(page)} count={totalPages} sx={{ color: "black" }} />
+      <Pagination onChange={(_, page) => handlePagination(page)} count={totalPages} color="error"/>
       {/* <Button variant="outlined" onClick={handlePagination}>Показать ещё</Button> */}
     </div>
   );

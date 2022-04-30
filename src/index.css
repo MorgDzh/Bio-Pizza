@@ -22,6 +22,7 @@ button {
 span {
   color: black !important; 
   color: unset !important;
+  /* background-color: #ff6800 !important; */
 
 }
 
@@ -207,6 +208,10 @@ a {
   margin: 15px;
 }
 
+.singup-btn {
+  color: white !important;
+}
+
 .card-form button {
   margin: 15px;
   padding: 10px;
@@ -217,4 +222,16 @@ a {
 
 h2 {
   color: black;
+}
+
+.css-to4x1n-MuiBadge-badge {
+  background-color: #ff6800 !important;
+}
+
+.css-1wxstni-MuiSvgIcon-root {
+  color: #ff6800 !important;
+}
+
+.css-meo8sc-MuiButtonBase-root-MuiPaginationItem-root.Mui-selected {
+  background-color: #ff6800 !important;
 }

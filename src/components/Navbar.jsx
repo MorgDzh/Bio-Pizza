@@ -15,6 +15,7 @@ import { Link } from "react-router-dom";
 import { Badge, createTheme, ThemeProvider } from "@mui/material";
 import { Bookmark, Logout, ShoppingCart } from "@mui/icons-material";
 import { clientContext } from "../contexts/ClientContext";
+import theme from "./Theme";
 
 const settings = ["Profile", "Account", "Dashboard", "Logout"];
 
@@ -151,6 +152,7 @@ const Navbar = () => {
                     <Bookmark />
                 </Link>
                 <Link to="/cart" style={{ marginRight: 10 }}>
+                  {/* Снизу костыль  с цветом, в css я дал ссылку на класс и указал оранжевый */}
                   <Badge badgeContent={cartCount} color="error">
                     <ShoppingCart />
                   </Badge>
@@ -163,15 +165,18 @@ const Navbar = () => {
                       style={{ marginRight: 10 }}
                     />
                     <span style={{ marginRight: 10 }}>{user.email}</span>
-                    <Button onClick={logOut}>
-                      <Logout color="error" />
+                    <Button onClick={logOut} >
+                      <Logout color="error"/>
                     </Button>
                   </>
                 ) : (
                   <Button
+                    className="singup-btn"
                     onClick={authWithGoogle}
-                    variant="outlined"
-                    color="error"
+                    // variant="outlined"
+                    variant="contained"
+                    theme={theme}
+                    // color="error"
                   >
                     Войти
                   </Button>
