@@ -9,7 +9,7 @@ const MyPagination = () => {
 
   return (
     <div className="my-pagination">
-      <Pagination onChange={(_, page) => handlePagination(page)} count={totalPages} sx={{ color: "white" }} />
+      <Pagination onChange={(_, page) => handlePagination(page)} count={totalPages} sx={{ color: "black" }} />
       {/* <Button variant="outlined" onClick={handlePagination}>Показать ещё</Button> */}
     </div>
   );

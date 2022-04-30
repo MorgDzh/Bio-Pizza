@@ -41,11 +41,12 @@ import {
           value={searchValue}
           onChange={(e) => handleFilters("q", e.target.value)}
           type="search" 
-          sx={{ color: "white" }}
+          // sx={{ color: "white" }}
+          sx={{ color: "black" }}
           label="Живой поиск... "
         />
         <FormControl variant="standard">
-            <InputLabel id="dough-label" sx={{ color: "white" }}>Выберите тесто</InputLabel>
+            <InputLabel id="dough-label" sx={{ color: "black" }}>Выберите тесто</InputLabel>
             <Select
               value={doughValue}
               onChange={(e) => handleFilters("dough", e.target.value )}
@@ -58,7 +59,7 @@ import {
             </Select>
           </FormControl>
         <FormControl variant="standard">
-          <InputLabel id="size-label" sx={{ color: "white" }}>Выберите размер</InputLabel>
+          <InputLabel id="size-label" sx={{ color: "black" }}>Выберите размер</InputLabel>
           <Select
             value={sizeValue}
             onChange={(e) => handleFilters("size", e.target.value)}

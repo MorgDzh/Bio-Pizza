@@ -27,9 +27,10 @@ const Navbar = () => {
 
   const darkTheme = createTheme({
     palette: {
-      mode: "dark",
+      mode: "light",
       primary: {
-        main: "#1976d2",
+        // main: "#1976d2",
+        main: "#e0ddd7",
       },
     },
   });

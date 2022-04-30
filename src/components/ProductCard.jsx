@@ -47,7 +47,7 @@ export default function ProductCard({ item }) {
   };
 
   return (
-    <Card sx={{ maxWidth: 345, background: '#272727', color: "white"}}>
+    <Card sx={{ maxWidth: 345, background: '#e0ddd7', color: "black"}}>
       <Link to={`/details/${item.id}`}>
         <CardHeader title={item.name} subheader={`${item.price} сом` } />
       </Link>
@@ -76,11 +76,11 @@ export default function ProductCard({ item }) {
           }}
           aria-label="add to favorites"
         >
-          <FavoriteIcon color={liked ? "error" : "primary"} />
+          <FavoriteIcon color={liked ? "error" : "inherit"} />
           <span>{item.likes}</span>
         </IconButton>
         <IconButton aria-label="share">
-          <ShareIcon sx={{ color: "white" }}/>
+          <ShareIcon sx={{ color: "black" }}/>
         </IconButton>
         {checkProductInFavorite(item.id) ? (
           <IconButton onClick={() => deleteProductInFavorite(item.id)} >
@@ -88,7 +88,7 @@ export default function ProductCard({ item }) {
           </IconButton>
         ) : (
           <IconButton onClick={() => addProductToFavorite(item)}>
-            <BookmarkIcon sx={{ color: "white" }}  />
+            <BookmarkIcon sx={{ color: "black" }}  />
           </IconButton>
         )} 
         {checkProductInCart(item.id) ? (
@@ -97,7 +97,7 @@ export default function ProductCard({ item }) {
           </IconButton>
         ) : (
           <IconButton onClick={() => addProductToCart(item)}>
-            <ShoppingCart sx={{ color: "white" }} />
+            <ShoppingCart sx={{ color: "black" }} />
           </IconButton>
         )}
         <ExpandMore
@@ -105,7 +105,7 @@ export default function ProductCard({ item }) {
           onClick={handleExpandClick}
           aria-expanded={expanded}
           aria-label="show more"
-          sx={{ color: "white" }}
+          sx={{ color: "black" }}
         >
           <ExpandMoreIcon />
         </ExpandMore>

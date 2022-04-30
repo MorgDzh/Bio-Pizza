@@ -6,7 +6,8 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   /* background-color: #272727; */
-  background-color: #363738 !important;
+  /* background-color: #363738 !important; */
+  background-color: white !important;
 }
 
 code {
@@ -19,20 +20,20 @@ button {
 }
 
 span {
-  color: white !important; 
+  color: black !important; 
   color: unset !important;
 
 }
 
 p {
-  color: white !important; 
+  color: black !important; 
   color: unset !important;
 }
 
 a {
   text-decoration: none;
   color: unset !important;
-  color: white !important; 
+  color: black !important; 
 }
 
 .add-edit-page form {
@@ -64,7 +65,8 @@ a {
   grid-template-columns: 250px 200px 200px 150px;
   column-gap: 25px;
   align-items: center;
-  background-color: #272727;
+  /* background-color: #272727; */
+  background-color: #e0ddd7;
 }
 
 .filters-block button {
@@ -75,7 +77,8 @@ a {
   display: flex;
   justify-content: center;
   padding: 30px 0;
-  color: white;
+  /* color: white; */
+  color: black;
 }
 
 .product-details {
@@ -174,15 +177,15 @@ a {
 }
 
 .filters-block label {
-  color: white
+  color: black
 }
 
 .add-edit-page {
-  color: white;
+  color: black;
 }
 
 .add-edit-page label {
-  color: white !important; 
+  color: black !important; 
 }
 
 .edit-btn {
@@ -213,5 +216,5 @@ a {
 }
 
 h2 {
-  color: white;
+  color: black;
 }
