@@ -47,7 +47,8 @@ export default function ProductCard({ item }) {
   };
 
   return (
-    <Card sx={{ maxWidth: 345, background: '#e0ddd7', color: "black"}}>
+    // #e0ddd7
+    <Card sx={{ maxWidth: 345, background: 'white', color: "black"}}>
       <Link to={`/details/${item.id}`}>
         <CardHeader title={item.name} subheader={`${item.price} сом` } />
       </Link>

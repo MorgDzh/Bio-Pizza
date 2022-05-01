@@ -67,7 +67,8 @@ a {
   column-gap: 25px;
   align-items: center;
   /* background-color: #272727; */
-  background-color: #e0ddd7;
+  /* background-color: #e0ddd7; */
+  background-color: white;
 }
 
 .filters-block button {

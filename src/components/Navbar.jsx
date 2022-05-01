@@ -31,7 +31,8 @@ const Navbar = () => {
       mode: "light",
       primary: {
         // main: "#1976d2",
-        main: "#e0ddd7",
+        // main: "#e0ddd7",
+        main: "#ffffff"
       },
     },
   });

@@ -4,7 +4,7 @@
       "name": "xox",
       "description": "hende",
       "price": 1500,
-      "image": "https://www.simplyrecipes.com/thmb/1KOEQ0SPZNXwU0pUXUDdAm6Z7xo=/2001x2001/smart/filters:no_upscale()/Simply-Recipes-Homemade-Pizza-Dough-Lead-Shot-1c-c2b1885d27d4481c9cfe6f6286a64342.jpg",
+      "image": "https://dodopizza-a.akamaihd.net/static/Img/Products/e2393e247dc64ecbbf23c82243c0a399_584x584.jpeg",
       "dough": "thick",
       "size": "m",
       "id": 1,
@@ -171,6 +171,14 @@
       "name": "Dzhanaliev aktan",
       "number": "5342532542141441",
       "id": 10
+    },
+    {
+      "cvc": "412",
+      "expiry": "4214",
+      "focus": "cvc",
+      "name": "Dzhanalieva mirgul",
+      "number": "2412412412414124",
+      "id": 11
     }
   ]
 }
