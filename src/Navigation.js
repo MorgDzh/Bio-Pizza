@@ -8,6 +8,7 @@ import EditProductPage from "./pages/EditProduct";
 import MainPage from "./pages/MainPage";
 import ProductDetails from "./pages/ProductDetails";
 import Favorites from "./pages/Favorites"
+import NotFoundPage from "./pages/NotFoundPage";
 
 const Navigation = () => {
   return (
@@ -21,6 +22,7 @@ const Navigation = () => {
         <Route path="/cart" element={<CartPage />} />
         <Route path="/details/:id" element={<ProductDetails />}/>
         <Route path="/favorites" element={<Favorites/>}/>
+        <Route path="/*" element={< NotFoundPage />} />
       </Routes>
     </BrowserRouter>
   );
