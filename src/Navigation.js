@@ -9,6 +9,7 @@ import MainPage from "./pages/MainPage";
 import ProductDetails from "./pages/ProductDetails";
 import Favorites from "./pages/Favorites"
 import NotFoundPage from "./pages/NotFoundPage";
+import Footer from "./components/Footer";
 
 const Navigation = () => {
   return (
@@ -24,6 +25,7 @@ const Navigation = () => {
         <Route path="/favorites" element={<Favorites/>}/>
         <Route path="/*" element={< NotFoundPage />} />
       </Routes>
+      <Footer />
     </BrowserRouter>
   );
 };

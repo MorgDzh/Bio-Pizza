@@ -3,6 +3,7 @@ import React, { useContext } from "react";
 import { useEffect } from "react";
 import DemoCarousel from "../components/Carousel";
 import FiltersBlock from "../components/FiltersBlock";
+import Footer from "../components/Footer";
 import MyPagination from "../components/MyPagination";
 import ProductCard from "../components/ProductCard";
 import { clientContext } from "../contexts/ClientContext";

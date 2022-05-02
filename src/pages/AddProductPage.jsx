@@ -116,7 +116,7 @@ import {
                 <MenuItem value="l">LARGE</MenuItem>
               </Select>
             </FormControl>
-            <Button type="submit" variant="outlined">
+            <Button type="submit" variant="contained" className="add-btn">
               Добавить
             </Button>
           </form>

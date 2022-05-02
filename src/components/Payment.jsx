@@ -66,7 +66,7 @@ export default class PaymentForm extends React.Component {
             onChange={this.handleInputChange}
             onFocus={this.handleInputFocus}
           />
-          <button type='submit'>Добавить</button>
+          <button type='submit' className='pay-btn'>Добавить</button>
         </form>
       </div>
     );

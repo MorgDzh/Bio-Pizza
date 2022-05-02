@@ -43,6 +43,11 @@ a {
   flex-direction: column;
 }
 
+.add-btn {
+  color: white !important;
+  background-color: #ff9800 !important;
+}
+
 .products-list {
   display: grid;
   justify-content: center;
@@ -219,6 +224,10 @@ a {
   border-radius: 10px;
   background-color: gray;
   color: white !important; 
+}
+
+.pay-btn {
+  background-color : #ff6800 !important
 }
 
 h2 {
