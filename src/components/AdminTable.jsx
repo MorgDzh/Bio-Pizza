@@ -35,7 +35,7 @@ export default function AdminTable(props) {
   const data = React.useContext(adminContext);
   const { deleteProduct } = data;
   return (
-    <TableContainer component={Paper}>
+    <TableContainer component={Paper} className="admin-table">
       <Table sx={{ minWidth: 700 }} aria-label="customized table">
         <TableHead>
           <TableRow>

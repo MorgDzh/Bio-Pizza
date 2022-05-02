@@ -10,7 +10,6 @@ import Container from "@mui/material/Container";
 import Avatar from "@mui/material/Avatar";
 import Button from "@mui/material/Button";
 import MenuItem from "@mui/material/MenuItem";
-// import pizzaLogo from "../assets/pizzalogo2.png";
 import pizzaLogo from "../assets/pizza.png";
 import { Link } from "react-router-dom";
 import { Badge, createTheme, ThemeProvider } from "@mui/material";
@@ -100,19 +99,16 @@ const Navbar = () => {
                 >
                   <Link to="/admin-panel">
                     <MenuItem onClick={handleCloseNavMenu}>
-                      {/* <MenuItem> */}
                       <Typography textAlign="center">Admin PANEL</Typography>
                     </MenuItem>
                   </Link>
                   <Link to="/admin-panel/add">
                     <MenuItem onClick={handleCloseNavMenu}>
-                      {/* <MenuItem> */}
                       <Typography textAlign="center">ADD PRODUCT</Typography>
                     </MenuItem>
                   </Link>
-                  <Link to="/admin-panel">
+                  <Link to="/favorites">
                     <MenuItem onClick={handleCloseNavMenu}>
-                      {/* <MenuItem> */}
                       <Typography textAlign="center">Favorites</Typography>
                     </MenuItem>
                   </Link>
@@ -139,11 +135,6 @@ const Navbar = () => {
                     ADD PRODUCT
                   </Button>
                 </Link>
-                {/* <Link to="/favorites">
-                  <Button sx={{ my: 2, color: "white", display: "block" }}>
-                    Favorites
-                  </Button>
-                </Link> */}
               </Box>
 
               <Box
@@ -166,7 +157,7 @@ const Navbar = () => {
                       alt={user.displayName}
                       style={{ marginRight: 10 }}
                     />
-                    <span style={{ marginRight: 10 }}>{user.email}</span>
+                    <span className="username" style={{ marginRight: 10 }}>{user.email}</span>
                     <Button onClick={logOut} >
                       <Logout color="error"/>
                     </Button>
@@ -175,10 +166,8 @@ const Navbar = () => {
                   <Button
                     className="singup-btn"
                     onClick={authWithGoogle}
-                    // variant="outlined"
                     variant="contained"
                     theme={theme}
-                    // color="error"
                   >
                     Войти
                   </Button>

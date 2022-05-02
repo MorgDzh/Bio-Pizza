@@ -48,7 +48,7 @@ const Footer = () => {
               <Heading>Контакты</Heading>
               <FooterLink href="#">+996 555 222 111</FooterLink>
               <FooterLink href="#">+996 777 333 111</FooterLink>
-              <FooterLink href="https://github.com/MorgDzh">Gitgub</FooterLink>
+              <FooterLink href="https://github.com/MorgDzh">Github</FooterLink>
               <FooterLink href="https://www.whatsapp.com/?lang=ru">Whatsapp</FooterLink>
             </Column>
             <Column>

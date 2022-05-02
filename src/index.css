@@ -5,8 +5,6 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  /* background-color: #272727; */
-  /* background-color: #363738 !important; */
   background-color: white !important;
 }
 
@@ -20,22 +18,26 @@ button {
 }
 
 span {
-  color: black !important; 
+  color: black !important;
   color: unset !important;
-  /* background-color: #ff6800 !important; */
-
 }
 
 p {
-  color: black !important; 
+  color: black !important;
   color: unset !important;
 }
 
 a {
   text-decoration: none;
   color: unset !important;
-  color: black !important; 
+  color: black !important;
 }
+
+h2 {
+  color: black;
+}
+
+/* Forms */
 
 .add-edit-page form {
   display: flex;
@@ -43,9 +45,24 @@ a {
   flex-direction: column;
 }
 
-.add-btn {
-  color: white !important;
-  background-color: #ff9800 !important;
+.product-details-feedback form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 750px;
+  margin: 0 auto;
+  margin-bottom: 50px;
+}
+
+.card-form {
+  display: flex;
+  margin-top: 15px;
+}
+
+.card-form input {
+  padding: 10px;
+  border-radius: 10px;
+  margin: 15px;
 }
 
 .products-list {
@@ -71,20 +88,14 @@ a {
   grid-template-columns: 250px 200px 200px 150px;
   column-gap: 25px;
   align-items: center;
-  /* background-color: #272727; */
-  /* background-color: #e0ddd7; */
   background-color: white;
-}
-
-.filters-block button {
-  margin-top: 20px;
+  max-width: 100%;
 }
 
 .my-pagination {
   display: flex;
   justify-content: center;
   padding: 30px 0;
-  /* color: white; */
   color: black;
 }
 
@@ -124,15 +135,6 @@ a {
   text-align: center;
 }
 
-.product-details-feedback form {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  max-width: 750px;
-  margin: 0 auto;
-  margin-bottom: 50px;
-}
-
 .product-details-feedback > div {
   max-width: 750px;
   width: 100%;
@@ -152,7 +154,7 @@ a {
 }
 
 .filters-block label {
-  color: black
+  color: black;
 }
 
 .add-edit-page {
@@ -160,30 +162,38 @@ a {
 }
 
 .add-edit-page label {
-  color: black !important; 
+  color: black !important;
+}
+
+.pizza-carousel {
+  margin-top: 30px;
+}
+
+/* Buttons */
+
+.add-btn {
+  color: white !important;
+  background-color: #ff9800 !important;
 }
 
 .edit-btn {
-  color: black !important
+  color: black !important;
 }
 
 .reset-btn {
-  color: white !important
-}
-
-.card-form {
-  display: flex;
-  margin-top: 15px;
-}
-
-.card-form input {
-  padding: 10px;
-  border-radius: 10px;
-  margin: 15px;
+  color: white !important;
 }
 
 .singup-btn {
   color: white !important;
+}
+
+.pay-btn {
+  background-color: #ff6800 !important;
+}
+
+.filters-block button {
+  margin-top: 20px;
 }
 
 .card-form button {
@@ -191,20 +201,10 @@ a {
   padding: 10px;
   border-radius: 10px;
   background-color: gray;
-  color: white !important; 
+  color: white !important;
 }
 
-.pizza-carousel {
-  margin-top: 30px;
-}
-
-.pay-btn {
-  background-color : #ff6800 !important
-}
-
-h2 {
-  color: black;
-}
+/* Crutches (Костыли) -> Чтобы было красивее */
 
 .css-to4x1n-MuiBadge-badge {
   background-color: #ff6800 !important;
@@ -271,4 +271,65 @@ svg {
 .will5 {
   stroke: #36518c;
   animation-delay: -5s;
+}
+
+/* Adaptive  */
+
+@media all and (max-width: 768px) {
+  .filters-block {
+    display: grid;
+    grid-template-columns: auto;
+    column-gap: 25px;
+    align-items: center;
+    background-color: white;
+    max-width: 100%;
+  }
+
+  .products-list {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: auto;
+    row-gap: 10px;
+    margin-top: 50px;
+    column-gap: 25px;
+  }
+
+  .username {
+    display: none;
+  }
+
+  .card-form {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .card-form input {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+
+@media all and (min-width: 768px) {
+  .products-list {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: 1fr 1fr;
+    row-gap: 10px;
+    margin-top: 50px;
+    column-gap: 25px;
+  }
+}
+
+@media all and (min-width: 1024px) {
+  .products-list {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: 1fr 1fr 1fr;
+    row-gap: 10px;
+    margin-top: 50px;
+    column-gap: 25px;
+  }
 }

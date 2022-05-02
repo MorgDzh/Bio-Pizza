@@ -8,7 +8,7 @@ const firebaseConfig = {
   storageBucket: "bio-pizza-d321d.appspot.com",
   messagingSenderId: "1043165726145",
   appId: "1:1043165726145:web:83dc9d84b14430429c1b40"
-};
+}; 
 
 const app = initializeApp(firebaseConfig);
 

@@ -1,35 +1,34 @@
-import React from 'react';
-import Cards from 'react-credit-cards';
+import React from "react";
+import Cards from "react-credit-cards";
 import axios from "axios";
-import {newApi} from "../helpers/newApi"
-// import 'react-credit-cards/es/styles-compiled.css';
+import { newApi } from "../helpers/newApi";
 
 export default class PaymentForm extends React.Component {
   state = {
-    cvc: '',
-    expiry: '',
-    focus: '',
-    name: '',
-    number: '',
+    cvc: "",
+    expiry: "",
+    focus: "",
+    name: "",
+    number: "",
   };
 
   handleInputFocus = (e) => {
     this.setState({ focus: e.target.name });
-  }
-  
+  };
+
   handleInputChange = (e) => {
     const { name, value } = e.target;
-    
+
     this.setState({ [name]: value });
-  }
-  
+  };
+
   postMoney = async (state) => {
     await axios.post(newApi, this.state);
-  };  
+  };
 
   render() {
     return (
-      <div className='card-form'>
+      <div className="card-form">
         <Cards
           cvc={this.state.cvc}
           expiry={this.state.expiry}
@@ -38,7 +37,7 @@ export default class PaymentForm extends React.Component {
           number={this.state.number}
         />
         <form onSubmit={this.postMoney}>
-        	<input
+          <input
             type="tel"
             name="number"
             placeholder="Card Number"
@@ -66,7 +65,9 @@ export default class PaymentForm extends React.Component {
             onChange={this.handleInputChange}
             onFocus={this.handleInputFocus}
           />
-          <button type='submit' className='pay-btn'>Добавить</button>
+          <button type="submit" className="pay-btn">
+            Добавить
+          </button>
         </form>
       </div>
     );
