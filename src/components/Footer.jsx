@@ -34,23 +34,22 @@ const Footer = () => {
           <Row>
             <Column>
               <Heading>Про нас</Heading>
-              <FooterLink href="#">Aim</FooterLink>
-              <FooterLink href="#">Vision</FooterLink>
-              <FooterLink href="#">Testimonials</FooterLink>
+              <FooterLink href="/">Главная</FooterLink>
+              <FooterLink href="/cart">Корзина</FooterLink>
+              <FooterLink href="/admin-panel/add">Добавление</FooterLink>
             </Column>
             <Column>
               <Heading>Сервис</Heading>
-              <FooterLink href="#">Writing</FooterLink>
-              <FooterLink href="#">Internships</FooterLink>
-              <FooterLink href="#">Coding</FooterLink>
-              <FooterLink href="#">Teaching</FooterLink>
+              <FooterLink href="/favorites">Избранное</FooterLink>
+              <FooterLink href="/admin-panel">Админ панель</FooterLink>
+              <FooterLink href="*">Ошибка</FooterLink>
             </Column>
             <Column>
               <Heading>Контакты</Heading>
-              <FooterLink href="#">Uttar Pradesh</FooterLink>
-              <FooterLink href="#">Ahemdabad</FooterLink>
-              <FooterLink href="#">Indore</FooterLink>
-              <FooterLink href="#">Mumbai</FooterLink>
+              <FooterLink href="#">+996 555 222 111</FooterLink>
+              <FooterLink href="#">+996 777 333 111</FooterLink>
+              <FooterLink href="https://github.com/MorgDzh">Gitgub</FooterLink>
+              <FooterLink href="https://www.whatsapp.com/?lang=ru">Whatsapp</FooterLink>
             </Column>
             <Column>
               <Heading>Соцсети</Heading>

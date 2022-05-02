@@ -61,7 +61,7 @@ const ClientContext = (props) => {
     dispatch(action);
   };
 
-  const productsPerPage = 6;
+  const productsPerPage = 9;
   const [currentPage, setCurrentPage] = useState(1);
 
   const indexOfLastProduct = currentPage * productsPerPage;
