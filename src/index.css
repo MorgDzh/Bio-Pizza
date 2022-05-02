@@ -28,7 +28,7 @@ p {
 }
 
 a {
-  text-decoration: none;
+  text-decoration: none !important; 
   color: unset !important;
   color: black !important;
 }
@@ -180,8 +180,16 @@ h2 {
   color: black !important;
 }
 
+.save-btn {
+  background-color: #ff6800 !important;
+}
+
 .reset-btn {
   color: white !important;
+}
+
+.feedback-btn {
+  background-color: #ff7800 !important;
 }
 
 .singup-btn {

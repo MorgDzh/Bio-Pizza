@@ -40,28 +40,28 @@ export default class PaymentForm extends React.Component {
           <input
             type="tel"
             name="number"
-            placeholder="Card Number"
+            placeholder="Номер карты"
             onChange={this.handleInputChange}
             onFocus={this.handleInputFocus}
           />
           <input
             type="string"
             name="name"
-            placeholder="Name order"
+            placeholder="Имя владельца"
             onChange={this.handleInputChange}
             onFocus={this.handleInputFocus}
           />
           <input
             type="tel"
             name="expiry"
-            placeholder="Cart Date"
+            placeholder="Дата карты"
             onChange={this.handleInputChange}
             onFocus={this.handleInputFocus}
           />
           <input
             type="tel"
             name="cvc"
-            placeholder="Card Number"
+            placeholder="Код карты"
             onChange={this.handleInputChange}
             onFocus={this.handleInputFocus}
           />

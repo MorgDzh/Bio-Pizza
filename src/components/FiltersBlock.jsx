@@ -85,7 +85,7 @@ const FiltersBlock = ({ getProducts }) => {
         onClick={resetFilter}
         className="reset-btn"
       >
-        Reset
+        Сбросить
       </Button>
     </div>
   );

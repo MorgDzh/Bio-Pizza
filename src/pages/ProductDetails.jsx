@@ -54,7 +54,7 @@ const ProductDetails = () => {
                 {productDetails.size}
               </li>
               <li>
-                <strong>Размер теста: </strong>
+                <strong>Тесто: </strong>
                 {productDetails.dough}
               </li>
               <li>
@@ -85,7 +85,7 @@ const ProductDetails = () => {
               minRows={2}
               maxRows={5}
             />
-            <Button type="submit" variant="outlined">
+            <Button type="submit" variant="contained" className="feedback-btn">
               Оставить отзыв
             </Button>
           </form>

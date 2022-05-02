@@ -99,17 +99,17 @@ const Navbar = () => {
                 >
                   <Link to="/admin-panel">
                     <MenuItem onClick={handleCloseNavMenu}>
-                      <Typography textAlign="center">Admin PANEL</Typography>
+                      <Typography textAlign="center">Панель Админа</Typography>
                     </MenuItem>
                   </Link>
                   <Link to="/admin-panel/add">
                     <MenuItem onClick={handleCloseNavMenu}>
-                      <Typography textAlign="center">ADD PRODUCT</Typography>
+                      <Typography textAlign="center">Добавить продукт</Typography>
                     </MenuItem>
                   </Link>
                   <Link to="/favorites">
                     <MenuItem onClick={handleCloseNavMenu}>
-                      <Typography textAlign="center">Favorites</Typography>
+                      <Typography textAlign="center">Избранное</Typography>
                     </MenuItem>
                   </Link>
                 </Menu>
@@ -127,12 +127,12 @@ const Navbar = () => {
               <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
                 <Link to="/admin-panel">
                   <Button sx={{ my: 2, color: "white", display: "block" }}>
-                    ADMIN PANEL
+                    Админ панель
                   </Button>
                 </Link>
                 <Link to="/admin-panel/add">
                   <Button sx={{ my: 2, color: "white", display: "block" }}>
-                    ADD PRODUCT
+                    Добавить продукт
                   </Button>
                 </Link>
               </Box>
