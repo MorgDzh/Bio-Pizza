@@ -59,9 +59,9 @@ const FiltersBlock = ({ getProducts }) => {
           label="Выберите тесто"
           labelId="dough-label"
         >
-          <MenuItem value="traditional">Традиционное</MenuItem>
-          <MenuItem value="thick">Тонкое</MenuItem>
-          <MenuItem value="fat">Толстое</MenuItem>
+          <MenuItem value="Традиционное">Традиционное</MenuItem>
+          <MenuItem value="Тонкое">Тонкое</MenuItem>
+          <MenuItem value="Толстое">Толстое</MenuItem>
         </Select>
       </FormControl>
       <FormControl variant="standard">
@@ -74,9 +74,9 @@ const FiltersBlock = ({ getProducts }) => {
           label="Выберите размер"
           labelId="size-label"
         >
-          <MenuItem value="s">SMALL</MenuItem>
-          <MenuItem value="m">MIDDLE</MenuItem>
-          <MenuItem value="l">LARGE</MenuItem>
+          <MenuItem value="Маленькая">Маленькая</MenuItem>
+          <MenuItem value="Средняя">Средняя</MenuItem>
+          <MenuItem value="Большая">Большая</MenuItem>
         </Select>
       </FormControl>
       <Button

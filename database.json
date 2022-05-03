@@ -1,7 +1,7 @@
 {
   "products": [
     {
-      "name": "Чикен Бомбони",
+      "name": "Помидорчик",
       "description": "Соус альфредо, моцарелла, лук красный, перец, смесь сыров чеддер и пармезан, куриные кусочки, соус сладкий чили",
       "price": 1500,
       "image": "https://dodopizza-a.akamaihd.net/static/Img/Products/3401546fe43c42e9a05325a74c937ce4_584x584.jpeg",
@@ -277,5 +277,14 @@
       "id": 30
     }
   ],
-  "money": []
+  "money": [
+    {
+      "cvc": "313",
+      "expiry": "0626",
+      "focus": "cvc",
+      "name": "dzanaliev aktan",
+      "number": "4124214124124124",
+      "id": 1
+    }
+  ]
 }
