@@ -1,0 +1,343 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: white !important;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+button {
+  color: unset !important;
+}
+
+span {
+  color: black !important;
+  color: unset !important;
+}
+
+p {
+  color: black !important;
+  color: unset !important;
+}
+
+a {
+  text-decoration: none !important; 
+  color: unset !important;
+  color: black !important;
+}
+
+h2 {
+  color: black;
+}
+
+/* Forms */
+
+.add-edit-page form {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+
+.product-details-feedback form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 750px;
+  margin: 0 auto;
+  margin-bottom: 50px;
+}
+
+.card-form {
+  display: flex;
+  margin-top: 15px;
+}
+
+.card-form input {
+  padding: 10px;
+  border-radius: 10px;
+  margin: 15px;
+}
+
+.products-list {
+  display: grid;
+  justify-content: center;
+  grid-template-columns: 1fr 1fr 1fr;
+  row-gap: 10px;
+  margin-top: 50px;
+  column-gap: 25px;
+}
+
+.product-card-image {
+  object-fit: contain !important;
+}
+
+.product-card-description {
+  height: 42px;
+  overflow: hidden;
+}
+
+.filters-block {
+  display: grid;
+  grid-template-columns: 250px 200px 200px 150px;
+  column-gap: 25px;
+  align-items: center;
+  background-color: white;
+  max-width: 100%;
+}
+
+.my-pagination {
+  display: flex;
+  justify-content: center;
+  padding: 30px 0;
+  color: black;
+}
+
+.product-details {
+  display: flex;
+  margin-top: 50px;
+}
+
+.product-details img {
+  width: 40%;
+  height: 500px;
+  object-fit: contain;
+}
+
+.product-details > div {
+  width: 60%;
+}
+
+.product-details li {
+  margin: 5px;
+  font-size: 20px;
+}
+
+.product-details li strong {
+  width: 120px;
+  display: inline-block;
+}
+
+.product-details h2 {
+  font-size: 40px;
+  margin-top: 0;
+  margin-left: 20px;
+}
+
+.product-details-feedback h3 {
+  font-size: 24px;
+  text-align: center;
+}
+
+.product-details-feedback > div {
+  max-width: 750px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.feedback {
+  background-color: rgb(214, 214, 214);
+  border-radius: 10px;
+  padding: 10px;
+  margin: 15px 0;
+}
+
+.feedback h5 {
+  font-size: 20px;
+  margin: 0;
+}
+
+.filters-block label {
+  color: black;
+}
+
+.add-edit-page {
+  color: black;
+}
+
+.add-edit-page label {
+  color: black !important;
+}
+
+.pizza-carousel {
+  margin-top: 30px;
+}
+
+/* Buttons */
+
+.add-btn {
+  color: white !important;
+  background-color: #ff9800 !important;
+}
+
+.edit-btn {
+  color: black !important;
+}
+
+.save-btn {
+  background-color: #ff6800 !important;
+}
+
+.reset-btn {
+  color: white !important;
+}
+
+.feedback-btn {
+  background-color: #ff7800 !important;
+}
+
+.singup-btn {
+  color: white !important;
+}
+
+.pay-btn {
+  background-color: #ff6800 !important;
+}
+
+.filters-block button {
+  margin-top: 20px;
+}
+
+.card-form button {
+  margin: 15px;
+  padding: 10px;
+  border-radius: 10px;
+  background-color: gray;
+  color: white !important;
+}
+
+/* Crutches (Костыли) -> Чтобы было красивее */
+
+.css-to4x1n-MuiBadge-badge {
+  background-color: #ff6800 !important;
+}
+
+.css-1wxstni-MuiSvgIcon-root {
+  color: #ff6800 !important;
+}
+
+.css-meo8sc-MuiButtonBase-root-MuiPaginationItem-root.Mui-selected {
+  background-color: #ff6800 !important;
+}
+
+.css-to4x1n-MuiBadge-badge {
+  color: white !important;
+}
+
+.carousel-indicators [data-bs-target] {
+  display: none;
+}
+
+/* Not Found Page */
+
+svg {
+  font-size: 150px;
+  padding-top: 11%;
+}
+
+.will {
+  fill: none;
+  stroke: #555;
+  stroke-width: 3px;
+  stroke-dasharray: 8% 30%;
+  stroke-dashoffset: 0;
+  animation: textanimation 6s linear infinite;
+}
+
+@keyframes textanimation {
+  100% {
+    stroke-dashoffset: -35%;
+  }
+}
+
+.will1 {
+  stroke: #9b83c5;
+  animation-delay: -1s;
+}
+
+.will2 {
+  stroke: #babebe;
+  animation-delay: -2s;
+}
+
+.will3 {
+  stroke: #b73a3a;
+  animation-delay: -3s;
+}
+
+.will4 {
+  stroke: #3ab7a0;
+  animation-delay: -4s;
+}
+
+.will5 {
+  stroke: #36518c;
+  animation-delay: -5s;
+}
+
+/* Adaptive  */
+
+@media all and (max-width: 768px) {
+  .filters-block {
+    display: grid;
+    grid-template-columns: auto;
+    column-gap: 25px;
+    align-items: center;
+    background-color: white;
+    max-width: 100%;
+  }
+
+  .products-list {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: auto;
+    row-gap: 10px;
+    margin-top: 50px;
+    column-gap: 25px;
+  }
+
+  .username {
+    display: none;
+  }
+
+  .card-form {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .card-form input {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+
+@media all and (min-width: 768px) {
+  .products-list {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: 1fr 1fr;
+    row-gap: 10px;
+    margin-top: 50px;
+    column-gap: 25px;
+  }
+}
+
+@media all and (min-width: 1024px) {
+  .products-list {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: 1fr 1fr 1fr;
+    row-gap: 10px;
+    margin-top: 50px;
+    column-gap: 25px;
+  }
+}
