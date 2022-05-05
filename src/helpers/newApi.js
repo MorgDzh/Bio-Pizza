@@ -1,1 +1,1 @@
-export const newApi = "http://localhost:8000/money";
+export const newApi = "https://bio-pizza.herokuapp.com/money";

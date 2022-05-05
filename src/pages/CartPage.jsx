@@ -8,9 +8,9 @@ import TableHead from "@mui/material/TableHead";
 import TableRow from "@mui/material/TableRow";
 import Paper from "@mui/material/Paper";
 import { clientContext } from "../contexts/ClientContext";
-import Cards from 'react-credit-cards';
+import Cards from "react-credit-cards";
 import PaymentForm from "../components/Payment";
-import 'react-credit-cards/es/styles-compiled.css';
+import "react-credit-cards/es/styles-compiled.css";
 
 const rows = [];
 
