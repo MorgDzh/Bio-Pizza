@@ -1,13 +1,14 @@
 import { initializeApp } from "firebase/app";
 import { getAuth } from "firebase/auth";
+// Нет необходимости импортировать dotenv. Это уже сделано в webpack.config.js
 
 const firebaseConfig = {
-  apiKey: "AIzaSyDtZq_Rg-BXO7CRgy7wXG7r-e6sJ7x1eso",
-  authDomain: "bio-pizza-d321d.firebaseapp.com",
-  projectId: "bio-pizza-d321d",
-  storageBucket: "bio-pizza-d321d.appspot.com",
-  messagingSenderId: "1043165726145",
-  appId: "1:1043165726145:web:83dc9d84b14430429c1b40"
+  apiKey: process.env.REACT_APP_APIKEY,
+  authDomain: process.env.REACT_APP_AUTHDOMAIN,
+  projectId: process.env.REACT_APP_PROJECTID,
+  storageBucket: process.env.REACT_APP_STORAGEBUCKET,
+  messagingSenderId: process.env.REACT_APP_MESSAGINGSENDERID,
+  appId: process.env.REACT_APP_APPID,
 }; 
 
 const app = initializeApp(firebaseConfig);
